@@ -1,0 +1,31 @@
+User  Create task under a task list "creation of a task record:
+- date created
+- task/name
+- description (optional)
+- due date (optional)
+- priority (high, medium, low)
+
+user will receive a notification when the date has come  
+User  Update task modification to a task record 
+User  View task   Countdown of days to due date 
+User  Delete task destruction of a task record  
+User  Archive task  modification to a task record 
+User  Can set task status to 'in progress'  modification of a task record 
+User  Can set task to 'completed' modification of a task record 
+
+#
+User  Create task list  "creation of a task list record
+- Name
+- Description (optional)" 
+User  Set a due date for a task list  "modification of a task list record
+#
+
+user will receive notification when due date arrives, and the task is not set to 'completed'" Updated task list
+#User  Edit task list  modification of a task list record  Updated task list
+User  Can view Task List  pull list of Task Lists for user  Index of tasks for a task list
+User  archive/hide TaskList update status of Task List record Index of task lists
+User  resizes the browser window    layout adapting to the smaller/bigger window width
+User  visits the dashboard page   randomly selected inspiration quote
+#User  visits the dashboard page pull the list of tasks for the user view all user's tasks/tasklist
+User  visits the dashboard page pull the list of overdue tasks for the user overdue tasks will be highlighted and shown in bigger font
+User  Sort tasks by due date, and then by priority    dashboard page with list of tasks/tasklists

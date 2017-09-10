@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+       <h1>Edit Tasklist</h1>
+       
+       <%= form_for @tasklist, url: tasklist_path(id: @tasklist.id), method: :put do |f| %>
+
+      <div class="form-group">
+        <%= f.label   :name , class: "control-label col-sm-2"%>
+        <div class="col-sm-8 col-sm-offset-2"><%= f.text_field :name , class: "form-control"  %></div>
+      </div>
+      <div class="form-group">
+        <%= f.label :description , class: "control-label col-sm-2" %>
+       <div class="col-sm-8 col-sm-offset-2"> <%= f.text_field :description , class: "form-control "  %></div>
+      </div>
+      <div class="form-group">
+        <%= f.label :duedate , class: "control-label col-sm-2" %>
+       <div class="col-sm-8 col-sm-offset-2"> <%= f.text_field :duedate , class: "form-control" %></div>
+      </div>
+
+      <%= f.hidden_field :status, :value => "In progress" %>
+
+
+      <div id="newButtons">
+
+      <%= link_to 'Back to Tasklist', tasklist_path(id: @tasklist.id), class: "btn btn-primary pull-left" %>  
+
+      <%= f.submit "Update" , class: "btn btn-success pull-right" %>
+        
+      </div>
+
+      <% end %>
+
+      
+  </div>
+</div>
+
+  <script>
+
+        var form = document.getElementById("new_tasklist");
+        form.className += " form-horizontal";
+        console.log(form.className);
+      
+  </script>

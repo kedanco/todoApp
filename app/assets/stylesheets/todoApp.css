@@ -1,0 +1,129 @@
+
+
+div {
+  text-align: center;
+}
+
+.form-group .control-label{
+  text-align: left;
+}
+
+
+/* index page */
+
+#dashHead, #dashBody, #archived{
+  text-align: center;
+}
+
+#dashHead{
+  margin-top: 30px;
+}
+
+table thead th{
+  text-align: center;
+  padding: 0px 20px 0px 20px;
+}
+
+thead{
+  font-size: 20px;
+  border-radius: 30px;
+  margin-bottom: 25px !important;
+}
+
+body *{
+  margin-bottom:15px;
+}
+
+h2{
+  margin-bottom: 20px;
+}
+
+table{
+  min-width: 150%;
+  width:100%;
+  height:100%;
+
+  margin:0px 0px 20px -140px !important;
+  
+
+}
+
+table tbody tr td{
+  line-height: 2.5em !important;
+}
+
+table, tbody{
+  margin: 20px 20px 20px 20px;
+}
+
+tr{
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 0px 20px 0px 20px !important;
+}
+
+
+th,td{
+  padding: 0px 15px 0px 15px;
+}
+
+a{
+    color:white;
+}
+
+#archived{
+  margin-top:20px;
+}
+
+
+
+/*new page*/
+
+
+
+
+
+/*show page*/
+
+.panel, .panel-title, .panel-body{
+  text-align: left;
+}
+
+.show .row{
+  margin-top: 50px;
+}
+
+#showContent{
+  margin-top: 50px;
+}
+
+#editBtn a, #deleteBtn a{
+  margin: -15px 0px 0px 50px;
+}
+
+
+#showTitle, #showName{
+  display:inline-block;
+}
+
+#showDescription{
+  font-size: 16px;
+  text-align: left;
+}
+
+#showDuedate{
+  font-size:14px;
+  padding-left: 20px;
+}
+
+#displayTasks{
+  padding-top: 20px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+#editIcon{
+  padding: 5px auto;
+  display:inline;
+  cursor:pointer;
+}

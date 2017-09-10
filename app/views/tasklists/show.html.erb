@@ -1,0 +1,97 @@
+
+
+<div class="row">
+
+      <h1> Tasklist Details </h1>
+
+      <div id="showContent" class="col-md-6 col-md-offset-1 pull-left">
+
+      
+        <div id="showTitle">
+            <div><h2 id="showName"> <%= @tasklist.name %> </h2> <span id="showDuedate">Due by: <%= @tasklist.duedate.to_date %></span> <span id="editBtn"><%= link_to 'Edit', edit_tasklist_path, class:"btn btn-default" %></span><span id="deleteBtn"><%= link_to 'Delete Tasklist', tasklist_path(id: @tasklist.id),method: :delete, class:"btn btn-danger" %></span></div> 
+
+          <p id="showDescription"> by <%= @tasklist.description %></p> 
+
+
+            <div id="displayTasks">
+              <!-- <h3>Tasks:</h3> -->
+              
+                  <% if (@tasklist.tasks.empty?) == false %>
+                    <% @tasklist.tasks.each do |task| %>
+                      <div class="panel panel-primary">
+                        <div class="panel-heading">
+                          <h4 class="panel-title"> <%= task.name %> <span class="taskDate"> <%= task.duedate %></span> <span id="editIcon"><i class="fa fa-pencil-square-o fa-2x pull-right" aria-hidden="true"></i></span> </h4> 
+                        </div>
+                          <p class="panel-body"> <%= task.description %> </p>
+
+                      
+                      </div>
+                      
+                    <% end %>
+                   <% else %>
+                    <p> No Tasks in this tasklist yet. </p>
+                  <% end %>
+                
+              
+            </div>
+
+      <div id="newTask" >
+
+          <h1>Create new Task</h1>
+       
+       <%= form_for @task, url: tasklist_tasks_path(tasklist_id: @tasklist.id), method: :post do |f| %>
+
+      <div class="form-group">
+          <%= f.label   :name , class: "control-label col-sm-2"%>
+          <div class="col-sm-8 col-sm-offset-1"><%= f.text_field :name , class: "form-control"  %></div>
+      </div>
+      <div class="form-group">
+          <%= f.label :description , class: "control-label col-sm-2" %>
+         <div class="col-sm-8 col-sm-offset-1"> <%= f.text_field :description , class: "form-control "  %></div>
+      </div>
+      <div class="form-group">
+          <%= f.label :duedate , class: "control-label col-sm-2" %>
+         <div class="col-sm-8 col-sm-offset-1"> <%= f.text_field :duedate , class: "form-control" %></div>
+       </div>
+       <div class="form-group">
+          <%= f.label :priority , class: "control-label col-sm-2" %>
+         <div class="col-sm-8 col-sm-offset-1"> <%= f.text_field :priority , class: "form-control" %></div>
+      </div>
+
+      <%= f.hidden_field :status, :value => "In progress" %>
+
+      
+
+      <%= f.submit "Create Task" , class: "btn btn-success pull-right" %>
+
+      <% end %>
+
+        </div>
+      
+        
+
+
+        </div>
+
+        
+
+    </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-md-6 col-md-offset-1">
+
+  <div id="showButtons" class="pull-left">
+
+           
+
+           
+
+           <%= link_to 'Back to Index', tasklists_path, class:"btn btn-primary" %>
+             
+        </div>
+
+  </div>
+</div>

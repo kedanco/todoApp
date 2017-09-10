@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo App</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  </head>
+
+  <body class="<% controller_name %> <%= action_name %>">
+    <div id="container">
+
+    <div > <% flash.class %> </div>
+    <div class="notice">
+      <%- flash.each do |key,value| %>
+        <% key %>
+        <div class="alert alert-danger"><%= value %></div>
+      <% end %>
+    </div>
+    <div> <% flash %>  </div>
+         <%= yield %>
+    </div>
+  </body>
+
+</html>
