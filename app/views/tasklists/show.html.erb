@@ -18,20 +18,21 @@
               
                   <% if (@tasklist.tasks.empty?) == false %>
                     <% @tasklist.tasks.each do |task| %>
+                    <% if task.valid? %>
                       <div class="panel panel-primary">
                         <div class="panel-heading">
-                          <h4 class="panel-title"> <%= task.name %> <span class="taskDate"> <%= task.duedate %></span> <span id="editIcon"><i class="fa fa-pencil-square-o fa-2x pull-right" aria-hidden="true"></i></span> </h4> 
+                          <h4 class="panel-title"> <%= task.name %> <span class="taskDate"> <%= task.duedate %></span> </h4> 
                         </div>
                           <p class="panel-body"> <%= task.description %> </p>
 
                       
                       </div>
-                      
+                      <% end %>
                     <% end %>
                    <% else %>
                     <p> No Tasks in this tasklist yet. </p>
                   <% end %>
-                
+                 <!-- <i class='fa fa-pencil-square-o fa-2x pull-right' aria-hidden='true'></i>  -->
               
             </div>
 
